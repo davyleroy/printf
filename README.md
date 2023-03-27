@@ -67,4 +67,5 @@ int main(void)
 {
     _printf("Hello, %s!\n", "world");
     _printf("Decimal: %d\n", 42);
-    _printf("Binary: %b
+    _printf("Binary: %b", 45);
+}
