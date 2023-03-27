@@ -1,55 +1,70 @@
-# printf
-0x11. C - printf team project
+Custom Printf Function
+This project consists of building a custom version of the printf function called _printf. The custom _printf function should be able to handle different data types and formatting options, as described below.
 
-Group Project:
-
-I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
-Write a function that produces output according to a format.
-
-Education is when you read the fine print. Experience is what you get if you don' t
+Features
+Basic Features
+_printf should be able to handle the following conversion specifiers:
+c: character
+s: string
+%: literal percentage character
+Advanced Features
 Handle the following conversion specifiers:
 
-With a face like mine, I do better in print
-Handle the following custom conversion specifiers:
+d: signed decimal integer
+i: signed decimal integer
+Custom conversion specifier:
 
-What one has not experienced, one will never understand in print
+b: unsigned int argument converted to binary
 Handle the following conversion specifiers:
 
-Nothing in fine print is ever good news
-Use a local buffer of 1024 chars in order to call write as little as possible.
+u: unsigned decimal integer
+o: unsigned octal integer
+x: unsigned hexadecimal integer (lowercase)
+X: unsigned hexadecimal integer (uppercase)
+Use a local buffer of 1024 chars to optimize write system calls.
 
-My weakness is wearing too much leopard print
-Handle the following custom conversion specifier:
+Custom conversion specifier:
 
-How is the world ruled and led to war? Diplomats lie to journalists and believe t hese lies when they see them in print
-Handle the following conversion specifier: p.
+S: string with non-printable characters (ASCII < 32 or >= 127) represented as \xHH, where HH is the hexadecimal value of the character.
+Handle the conversion specifier p for pointer address.
 
-The big print gives and the small print takes away
 Handle the following flag characters for non-custom conversion specifiers:
 
-Sarcasm is lost in print
++: forces a sign
+space: prints a space for positive numbers
+#: alternate form
 Handle the following length modifiers for non-custom conversion specifiers:
 
-l
-h
-Conversion specifiers to handle: d, i, u, o, x, X
+l: long int
+h:
 
-Print some money and give it to us for the rain forests
+Conversion specifiers to handle: d, i, u, o, x, X
 Handle the field width for non-custom conversion specifiers.
 
-The negative is the equivalent of the composer's score, and the print the perfor mance
 Handle the precision for non-custom conversion specifiers.
 
-It's depressing when you're still around and your albums are out of print
 Handle the 0 flag character for non-custom conversion specifiers.
 
-Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
 Handle the - flag character for non-custom conversion specifiers.
 
-Print is the sharpest and the strongest weapon of our party
-Handle the following custom conversion specifier:
+Custom conversion specifier:
 
-The flood of print has turned reading into a process of gulping rather than savo ring
-Handle the following custom conversion specifier:
+r: prints the reversed string
+Custom conversion specifier:
+R: prints the rot13'ed string
+Ensure all the above options work well together.
+Repository
+All the code for this project should be stored in the following GitHub repository: printf
 
-All the above options work well together.
+Usage
+To use the custom _printf function, include the header file main.h in your C code and call the _printf function as you would with the standard printf function. The custom _printf function should work with most format strings and conversion specifiers supported by the standard printf function, as well as the custom specifiers mentioned above.
+
+c
+Copy code
+#include "main.h"
+
+int main(void)
+{
+    _printf("Hello, %s!\n", "world");
+    _printf("Decimal: %d\n", 42);
+    _printf("Binary: %b
